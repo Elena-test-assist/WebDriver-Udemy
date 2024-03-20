@@ -211,6 +211,23 @@ export const config = {
             return ms
 
         })
+
+        browser.addCommand("sauceLogin", async() =>{
+            await $('.login-box').waitForDisplayed()
+            await $('[data-test="username"]').setValue("standard_user")
+            await $('[data-test="password"]').setValue("secret_sauce")
+            await $('[data-test="login-button"]').click()
+
+        })
+
+        browser.addCommand("sauceLogout", async () => {
+            await $('#react-burger-menu-btn').click()
+            await $('#logout_sidebar_link').waitForClickable()
+            await $('#logout_sidebar_link').click()
+        })
+
+    
+        
     // },
     /**
      * Runs before a WebdriverIO command gets executed.

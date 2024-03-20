@@ -1,0 +1,16 @@
+{
+  "name": "UDEMY-WDIO",
+  "type": "module",
+  "dependencies": {
+    "@wdio/cli": "^8.34.1"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^8.34.1",
+    "@wdio/mocha-framework": "^8.33.1",
+    "@wdio/spec-reporter": "^8.32.4",
+    "prettier": "3.2.5"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js"
+  }
+}
